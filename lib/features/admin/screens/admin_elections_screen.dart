@@ -16,7 +16,6 @@ import '../../../shared/widgets/custom_text_field.dart';
 import '../navigation/admin_navigation.dart';
 
 // Models
-import '../../../data/models/election_model.dart';
 
 /// Admin Elections Screen
 class AdminElectionsScreen extends StatefulWidget {

@@ -6,11 +6,9 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:bockvote/core/services/service_locator.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:bockvote/main.dart';
 
 void main() {
   setUpAll(() async {

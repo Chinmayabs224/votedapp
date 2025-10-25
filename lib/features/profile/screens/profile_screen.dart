@@ -16,7 +16,7 @@ import '../../../core/theme/app_dimensions.dart';
 
 /// Profile screen for viewing and editing user profile information
 class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+  const ProfileScreen({super.key});
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 // Core
@@ -18,7 +17,7 @@ import '../../../core/theme/app_dimensions.dart';
 
 /// Generate Keys screen for creating new blockchain keys
 class GenerateKeysScreen extends StatefulWidget {
-  const GenerateKeysScreen({Key? key}) : super(key: key);
+  const GenerateKeysScreen({super.key});
 
   @override
   State<GenerateKeysScreen> createState() => _GenerateKeysScreenState();

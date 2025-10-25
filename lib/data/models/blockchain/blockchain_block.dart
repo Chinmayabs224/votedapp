@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-import 'blockchain_transaction.dart';
 
 /// Blockchain block model that mirrors the Go blockchain Block structure
 class BlockchainBlock extends Equatable {

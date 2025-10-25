@@ -1,3 +1,5 @@
 {
-    "cmake.sourceDirectory": "C:/internship/flutter/windows"
+    "cmake.sourceDirectory": "C:/internship/flutter/windows",
+    "kiroAgent.configureMCP": "Enabled",
+    "codium.codeCompletion.enable": false
 }

@@ -151,7 +151,7 @@ class BlockchainRealtimeService {
     }
 
     try {
-      final wsUrl = _baseUrl.replaceFirst('http', 'ws') + '/ws';
+      final wsUrl = '${_baseUrl.replaceFirst('http', 'ws')}/ws';
       _webSocketChannel = IOWebSocketChannel.connect(wsUrl);
       _webSocketChannel!.stream.listen(
         _handleWebSocketMessage,

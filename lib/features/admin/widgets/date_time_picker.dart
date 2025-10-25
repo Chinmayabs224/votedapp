@@ -9,11 +9,11 @@ class DateTimePicker extends StatelessWidget {
   final Function(DateTime) onDateSelected;
 
   const DateTimePicker({
-    Key? key,
+    super.key,
     required this.label,
     required this.selectedDate,
     required this.onDateSelected,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,5 @@
 import 'package:equatable/equatable.dart';
 import 'blockchain_block.dart';
-import 'blockchain_transaction.dart';
 
 /// Blockchain state model that represents the current state of the blockchain
 class BlockchainState extends Equatable {

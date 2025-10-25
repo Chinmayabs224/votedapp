@@ -78,7 +78,7 @@ class BlockchainRealtimeService {
     
     try {
       // Convert HTTP URL to WebSocket URL
-      final wsUrl = _baseUrl.replaceFirst('http', 'ws') + '/ws';
+      final wsUrl = '${_baseUrl.replaceFirst('http', 'ws')}/ws';
       
       _channel = WebSocketChannel.connect(Uri.parse(wsUrl));
       

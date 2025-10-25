@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 // Core
@@ -18,7 +17,7 @@ import '../../../core/theme/app_dimensions.dart';
 
 /// Key Management screen for viewing and managing blockchain keys
 class KeyManagementScreen extends StatefulWidget {
-  const KeyManagementScreen({Key? key}) : super(key: key);
+  const KeyManagementScreen({super.key});
 
   @override
   State<KeyManagementScreen> createState() => _KeyManagementScreenState();

@@ -1,6 +1,4 @@
-import 'dart:typed_data';
 import 'package:equatable/equatable.dart';
-import 'package:convert/convert.dart';
 
 /// Represents a blockchain transaction
 class BlockchainTransaction extends Equatable {

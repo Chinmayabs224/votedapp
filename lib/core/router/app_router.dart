@@ -23,7 +23,6 @@ import '../../features/admin/screens/admin_reports_screen.dart';
 import '../../features/profile/screens/profile_screen.dart';
 import '../../features/keys/screens/key_management_screen.dart';
 import '../../features/keys/screens/generate_keys_screen.dart';
-import '../../presentation/screens/common/not_found_screen.dart';
 /// Router configuration for the application
 class AppRouter {
   static GoRouter createRouter() {

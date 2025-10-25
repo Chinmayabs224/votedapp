@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "testsprite": {
+      "command": "npx",
+      "args": [
+        "@testsprite/testsprite-mcp@latest"
+      ],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "testsprite_bootstrap_tests"
+      ]
+    }
+  }
+}

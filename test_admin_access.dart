@@ -4,12 +4,9 @@ import 'package:go_router/go_router.dart';
 
 // Core
 import 'lib/core/theme/app_theme.dart';
-import 'lib/core/constants/app_constants.dart';
-import 'lib/core/constants/route_names.dart';
 
 // Providers
 import 'lib/data/providers/auth_provider.dart';
-import 'lib/data/models/user_model.dart';
 
 // Admin screens
 import 'lib/features/admin/screens/admin_dashboard_screen.dart';

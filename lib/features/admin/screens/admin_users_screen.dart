@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 // Core
 import '../../../core/theme/colors.dart';
@@ -13,7 +12,6 @@ import '../../../shared/widgets/primary_button.dart';
 import '../../../shared/widgets/custom_text_field.dart';
 
 // Features
-import '../../../data/providers/auth_provider.dart';
 import '../../../data/models/user_model.dart';
 import '../navigation/admin_navigation.dart';
 

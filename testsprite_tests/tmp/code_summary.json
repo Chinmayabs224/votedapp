@@ -1,0 +1,80 @@
+{
+  "tech_stack": ["Dart", "Flutter", "Provider", "Go Router", "Dio", "Blockchain", "WebSocket", "SharedPreferences"],
+  "features": [
+    {
+      "name": "Authentication System",
+      "description": "User authentication with login, registration, and session management",
+      "files": ["lib/features/auth/screens", "lib/features/auth/providers", "lib/data/providers/auth_provider.dart", "lib/data/repositories/auth_repository.dart"]
+    },
+    {
+      "name": "Admin Panel",
+      "description": "Administrative interface for managing elections, candidates, and system settings",
+      "files": ["lib/features/admin/screens", "lib/features/admin/providers", "lib/features/admin/widgets", "lib/features/admin/models"]
+    },
+    {
+      "name": "Voting System",
+      "description": "Core voting functionality allowing users to cast votes in elections",
+      "files": ["lib/features/voting/screens", "lib/features/voting/providers", "lib/features/voting/models", "lib/data/repositories/voting_repository.dart"]
+    },
+    {
+      "name": "Election Management",
+      "description": "System for creating, managing, and monitoring elections",
+      "files": ["lib/data/providers/election_provider.dart", "lib/data/repositories/election_repository.dart", "lib/data/models/election_model.dart", "lib/features/voting/providers/election_provider.dart"]
+    },
+    {
+      "name": "Results Dashboard",
+      "description": "Real-time display of voting results with charts and analytics",
+      "files": ["lib/features/results/screens", "lib/features/results/providers", "lib/data/providers/results_provider.dart"]
+    },
+    {
+      "name": "Blockchain Integration",
+      "description": "Blockchain-based voting system for transparency and security",
+      "files": ["lib/core/services/blockchain_service.dart", "lib/core/services/blockchain_manager.dart", "lib/core/services/blockchain_realtime_service.dart", "lib/data/repositories/blockchain_repository.dart", "lib/data/repositories/blockchain_voting_repository.dart", "lib/data/providers/blockchain_provider.dart"]
+    },
+    {
+      "name": "Key Management",
+      "description": "Cryptographic key generation and management for blockchain operations",
+      "files": ["lib/features/keys/screens", "lib/features/keys/providers", "lib/features/keys/services"]
+    },
+    {
+      "name": "User Dashboard",
+      "description": "Main user interface showing available elections and user status",
+      "files": ["lib/features/dashboard/screens", "lib/features/dashboard/providers"]
+    },
+    {
+      "name": "User Profile",
+      "description": "User profile management and settings",
+      "files": ["lib/features/profile/screens"]
+    },
+    {
+      "name": "Navigation System",
+      "description": "App routing and navigation using Go Router",
+      "files": ["lib/presentation/navigation/app_router.dart", "lib/core/router/app_router.dart"]
+    },
+    {
+      "name": "UI Components",
+      "description": "Reusable UI components and widgets",
+      "files": ["lib/shared/widgets", "lib/presentation/widgets", "lib/features/admin/widgets"]
+    },
+    {
+      "name": "Network Layer",
+      "description": "HTTP client and API service layer using Dio",
+      "files": ["lib/core/network/api_client.dart", "lib/core/network/api_service.dart", "lib/core/network/network_exceptions.dart"]
+    },
+    {
+      "name": "Theme System",
+      "description": "App theming with colors, text styles, and responsive design",
+      "files": ["lib/core/theme", "lib/core/utils/responsive.dart"]
+    },
+    {
+      "name": "Data Models",
+      "description": "Data models for candidates, elections, users, and votes",
+      "files": ["lib/data/models/candidate_model.dart", "lib/data/models/election_model.dart", "lib/data/models/user_model.dart", "lib/data/models/vote_model.dart", "lib/data/models/blockchain"]
+    },
+    {
+      "name": "Service Locator",
+      "description": "Dependency injection and service management",
+      "files": ["lib/core/services/service_locator.dart"]
+    }
+  ]
+}

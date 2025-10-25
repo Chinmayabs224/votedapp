@@ -1,0 +1,554 @@
+[
+  {
+    "id": "TC001",
+    "title": "User Registration with valid data",
+    "description": "Verify that a new user can successfully register by providing valid information including username, email, and password.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to registration screen"
+      },
+      {
+        "type": "action",
+        "description": "Enter valid username, email, and password"
+      },
+      {
+        "type": "action",
+        "description": "Submit the registration form"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm registration success message is displayed and user receives authentication token"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify user is redirected to login or home screen"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "User Registration with invalid data",
+    "description": "Verify that the registration process rejects invalid inputs such as missing fields, invalid email format, or weak passwords.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to registration screen"
+      },
+      {
+        "type": "action",
+        "description": "Enter invalid email format and weak password"
+      },
+      {
+        "type": "action",
+        "description": "Submit the registration form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify error messages are shown for the invalid inputs"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm registration is blocked and no account is created"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "User Login with correct credentials",
+    "description": "Verify that an existing user can log in successfully using correct username/email and password with token issuance and session storage.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to login screen"
+      },
+      {
+        "type": "action",
+        "description": "Enter valid username/email and password"
+      },
+      {
+        "type": "action",
+        "description": "Click login button"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm login success and user is directed to the main dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate that authentication token is securely stored and used for subsequent requests"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "User Login with incorrect credentials",
+    "description": "Verify that login is denied when using incorrect username/email or password, and appropriate error feedback is displayed.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to login screen"
+      },
+      {
+        "type": "action",
+        "description": "Enter invalid or incorrect username/email and/or password"
+      },
+      {
+        "type": "action",
+        "description": "Click login button"
+      },
+      {
+        "type": "assertion",
+        "description": "Check error message is shown indicating failed authentication"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm user remains on login screen without token provision"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Login with biometric authentication",
+    "description": "Test biometric login flow where users can authenticate using biometric credentials after initial successful login and enrollment.",
+    "category": "security",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Complete standard login with valid credentials and enroll biometric authentication"
+      },
+      {
+        "type": "action",
+        "description": "Logout from the application"
+      },
+      {
+        "type": "action",
+        "description": "Attempt login using biometric authentication"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm successful login without manual credential input"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Create election with valid data",
+    "description": "Validate that an admin user can successfully create a new election specifying all required fields including title, candidates, voting rules, and schedule.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as admin"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to election creation screen"
+      },
+      {
+        "type": "action",
+        "description": "Enter valid election title, add candidates, configure voting rules, set start and end dates"
+      },
+      {
+        "type": "action",
+        "description": "Submit the new election form"
+      },
+      {
+        "type": "assertion",
+        "description": "Check election is successfully created and listed in election management"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Create election with invalid or missing data",
+    "description": "Ensure the election creation form enforces validation by rejecting missing mandatory fields, invalid dates, or no candidates.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as admin"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to election creation screen"
+      },
+      {
+        "type": "action",
+        "description": "Submit form with missing election title or no candidates"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate validation error messages are displayed and creation is blocked"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Search and filter elections",
+    "description": "Verify that users can search and filter the list of elections by status, date, or keyword to easily find relevant elections to vote in.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open election browsing section"
+      },
+      {
+        "type": "action",
+        "description": "Enter search keywords or apply status/date filters"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that the election list updates to show only matching elections"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Voting process with online vote submission",
+    "description": "Test the entire voting workflow where a user selects candidates, confirms vote, submits the vote, and receives a secure receipt while online.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as a voter"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to an active election voting screen"
+      },
+      {
+        "type": "action",
+        "description": "Select one or more candidates according to voting rules"
+      },
+      {
+        "type": "action",
+        "description": "Confirm vote and submit"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify vote is stored on blockchain and a receipt is displayed and saved"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Voting process with offline vote capability",
+    "description": "Validate offline voting where users can select candidates, confirm votes, and store votes locally to be synchronized when connectivity is restored.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Simulate offline mode on device"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to election voting screen"
+      },
+      {
+        "type": "action",
+        "description": "Select candidates and confirm vote offline"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify vote is saved locally and user receives receipt"
+      },
+      {
+        "type": "action",
+        "description": "Restore network connectivity"
+      },
+      {
+        "type": "assertion",
+        "description": "Check vote is synchronized with blockchain backend successfully"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Display real-time election results with analytics",
+    "description": "Confirm that election results update in real time with interactive charts, can be verified for integrity, and data can be exported.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to results screen of a live election"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify charts update automatically as new votes come in"
+      },
+      {
+        "type": "assertion",
+        "description": "Interact with charts to view analytics and details"
+      },
+      {
+        "type": "action",
+        "description": "Export results data to CSV or other formats"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm exported data is complete and accurate"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Admin user management functions",
+    "description": "Verify that admin users can add, edit, delete, enable, and disable other user accounts with role assignment and permission enforcement.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as admin"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to user management screen"
+      },
+      {
+        "type": "action",
+        "description": "Create a new user with specified role"
+      },
+      {
+        "type": "assertion",
+        "description": "Check new user is listed and can login with assigned role"
+      },
+      {
+        "type": "action",
+        "description": "Edit existing user details and role"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify updated user information is saved and enforced"
+      },
+      {
+        "type": "action",
+        "description": "Disable user and verify login is rejected for that user"
+      },
+      {
+        "type": "action",
+        "description": "Delete user and confirm removal from user list"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Blockchain voting transaction verification",
+    "description": "Test that votes submitted are correctly recorded on the ProjectX blockchain with transaction validation and Proof-of-Authority consensus.",
+    "category": "security",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Submit valid vote transaction through voting interface"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify transaction is recorded on blockchain with correct vote details"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm transaction passes Proof-of-Authority consensus validation"
+      },
+      {
+        "type": "assertion",
+        "description": "Check blockchain state synchronizes without conflicts with app database"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Handle blockchain transaction conflict resolution",
+    "description": "Verify system behavior when a blockchain transaction conflict occurs and ensure conflict is resolved without data corruption.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Simulate conflicting blockchain transaction (e.g., double vote)"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm conflict is detected"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify system resolves conflict according to PoA protocol"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure no invalid votes are recorded and correct vote count is maintained"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Real-time notification of vote count updates",
+    "description": "Ensure WebSocket real-time communication channels provide instantaneous updates to users and admins when new votes are submitted or election status changes.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open election results screen on multiple clients"
+      },
+      {
+        "type": "action",
+        "description": "Submit new vote from one client"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all connected clients receive real-time updates of vote counts and election status"
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "Responsive UI behavior on various devices",
+    "description": "Validate the application UI adapts correctly and remains usable on mobile phones, tablets, desktops, and web browsers with different screen resolutions and orientations.",
+    "category": "ui",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Launch app on Android and iOS devices, desktop environment, and web browsers"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify UI elements are arranged properly without overlapping or truncation"
+      },
+      {
+        "type": "assertion",
+        "description": "Check navigation menus, buttons, and inputs remain accessible and usable"
+      },
+      {
+        "type": "action",
+        "description": "Rotate devices to landscape/portrait and verify UI responsiveness"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm all content remains visible and properly aligned after orientation change"
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Performance under high user load",
+    "description": "Conduct tests to confirm the system handles 10,000+ concurrent users submitting votes while maintaining a vote submission response time under 2 seconds.",
+    "category": "performance",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Simulate 10,000+ concurrent users voting simultaneously using load testing tools"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that 95% or more votes are processed with response times under 2 seconds"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no votes are lost or duplicated during the load test"
+      }
+    ]
+  },
+  {
+    "id": "TC018",
+    "title": "Security penetration test for critical vulnerabilities",
+    "description": "Run security penetration tests targeting authentication, data storage, network communications, blockchain transactions, and admin functions to ensure no critical vulnerabilities exist.",
+    "category": "security",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Perform penetration testing using standard security tools and manual review"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no critical security vulnerabilities or data leaks are detected"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm role-based access control cannot be bypassed"
+      },
+      {
+        "type": "assertion",
+        "description": "Check data in transit is encrypted and blockchain integrity is preserved"
+      }
+    ]
+  },
+  {
+    "id": "TC019",
+    "title": "Cross-platform compatibility test",
+    "description": "Ensure consistent functionality and user experience on iOS, Android, multiple web browsers, and desktop environments.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Install and launch the application on iOS and Android devices"
+      },
+      {
+        "type": "action",
+        "description": "Access the web application from Chrome, Firefox, Safari, and Edge browsers"
+      },
+      {
+        "type": "action",
+        "description": "Use desktop application version on Windows, macOS, and Linux"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all core functions like login, voting, results viewing, and admin operations work identically across platforms"
+      }
+    ]
+  },
+  {
+    "id": "TC020",
+    "title": "Navigation flow verification using GoRouter",
+    "description": "Test navigation flows throughout the application to ensure smooth transitions and correct route handling including deep links and back navigation.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Launch app and navigate through login, election browsing, voting, results, and admin dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm URLs and routes update correctly according to GoRouter configuration"
+      },
+      {
+        "type": "action",
+        "description": "Test direct deep link access to specific screens"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify user is taken to correct screen with proper data loaded"
+      },
+      {
+        "type": "action",
+        "description": "Use back navigation buttons and gestures"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure back stack behaves consistently without application crashes"
+      }
+    ]
+  }
+]
